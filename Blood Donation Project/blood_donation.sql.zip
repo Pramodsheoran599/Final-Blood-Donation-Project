@@ -1,0 +1,202 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Oct 10, 2019 at 01:03 PM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.9
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `blood_donation`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `accounts`
+--
+CREATE Database blood_donation;
+USE blood_donation;
+CREATE TABLE `accounts` (
+  `fname` varchar(15) NOT NULL,
+  `lname` varchar(15) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `mobile` bigint(10) NOT NULL,
+  `dob` date NOT NULL,
+  `state` text NOT NULL,
+  `pass` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `accounts`
+--
+
+INSERT INTO `accounts` (`fname`, `lname`, `email`, `mobile`, `dob`, `state`, `pass`) VALUES
+('Pramod', 'Sheoran', 'abc@gmail.com', 3645745677, '1999-12-03', 'Jharkhand', '1234'),
+('Archana', 'Prasad', 'ap@gmail.com', 5768813244, '1999-12-08', 'Karnataka', '1234'),
+('Sujay', 'Pawar', 'sp@gmail.com', 9867352347, '1998-04-27', 'Maharashtra', '1234'),
+('Suyash', 'Gupte', 'xyz@gmail.com', 3244657442, '1999-12-23', 'Maharashtra', '1234');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blood_bank`
+--
+
+CREATE TABLE `blood_bank` (
+  `id` int(5) NOT NULL,
+  `name` varchar(40) NOT NULL,
+  `A+` int(5) DEFAULT NULL,
+  `A-` int(5) DEFAULT NULL,
+  `B+` int(5) DEFAULT NULL,
+  `B-` int(5) DEFAULT NULL,
+  `O+` int(5) DEFAULT NULL,
+  `O-` int(5) DEFAULT NULL,
+  `AB+` int(5) DEFAULT NULL,
+  `AB-` int(5) DEFAULT NULL,
+  `location` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `blood_bank`
+--
+
+INSERT INTO `blood_bank` (`id`, `name`, `A+`, `A-`, `B+`, `B-`, `O+`, `O-`, `AB+`, `AB-`, `location`) VALUES
+(13, 'Kokilaben', 13, 13, 16, 29, 80, 7, 33, 23, 'Mumbai'),
+(7, 'Ramnath', 34, 56, 23, 12, 89, 12, 54, 36, 'Pune');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `doctor`
+--
+
+CREATE TABLE `doctor` (
+  `id` int(5) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `mobile` bigint(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `doctor`
+--
+
+INSERT INTO `doctor` (`id`, `name`, `mobile`) VALUES
+(125, 'Suresh Jadhav', 2139766434),
+(126, 'Anjali Gupta', 45879012);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `donor`
+--
+
+CREATE TABLE `donor` (
+  `id` int(5) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `gender` varchar(10) NOT NULL,
+  `dob` date NOT NULL,
+  `mobile` bigint(10) NOT NULL,
+  `bgroup` varchar(10) NOT NULL,
+  `bpressure` varchar(10) NOT NULL,
+  `weight` int(10) NOT NULL,
+  `tattao` varchar(10) NOT NULL,
+  `drug` varchar(10) NOT NULL,
+  `date` date NOT NULL,
+  `location` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `donor`
+--
+
+INSERT INTO `donor` (`id`, `name`, `gender`, `dob`, `mobile`, `bgroup`, `bpressure`, `weight`, `tattao`, `drug`, `date`, `location`) VALUES
+(125, 'Ram Sharma', 'Male', '1999-03-23', 45362718, 'O+', '112/73', 78, 'No', 'No', '2019-10-03', 'Airoli'),
+(125, 'Prakash Yadav', 'Male', '1991-06-12', 45768912, 'AB-', '123/78', 90, 'No', 'No', '2019-10-03', 'Airoli'),
+(126, 'Aditya Sharma', 'Male', '1999-07-29', 9822271234, 'B-', '139/87', 73, 'No', 'No', '2019-10-04', 'Airoli'),
+(125, 'Riya Deshpande', 'Female', '1995-09-05', 9876543212, 'A+', '121/87', 68, 'No', 'No', '2019-10-03', 'Airoli'),
+(125, 'Shubham Singh', 'Male', '1995-09-05', 5678912454, 'O-', '111/89', 62, 'No', 'No', '2019-10-03', 'Airoli'),
+(125, 'asdf', 'male', '1999-09-08', 76543, 'O+', '1', 1, 'no', 'no', '0000-00-00', 'Airoli'),
+(125, 'zsxdcfvgbhnk', 'option2', '0000-00-00', 1234567, '6', '112/78', 34, '1', '1', '0000-00-00', 'Airoli'),
+(0, '', 'Male', '0000-00-00', 0, 'Choose Blo', '', 0, 'Choose Dru', 'Choose Dru', '0000-00-00', 'Airoli'),
+(0, '', 'Male', '0000-00-00', 0, 'Choose Blo', '', 0, 'Choose Dru', 'Choose Dru', '0000-00-00', 'Airoli'),
+(0, '', 'Male', '0000-00-00', 0, 'Choose Blo', '', 0, 'Choose Dru', 'Choose Dru', '0000-00-00', 'Airoli'),
+(125, 'ABC', 'Other', '0000-00-00', 123456, '3', '12', 34, '1', '1', '0000-00-00', 'Airoli'),
+(125, 'ABC', 'Other', '0000-00-00', 123456, '3', '12', 34, '1', '1', '0000-00-00', 'Airoli'),
+(125, 'asdfgg', 'Male', '1999-12-23', 2345678, 'O+', '123/89', 50, '1', '1', '2019-10-10', 'Airoli'),
+(125, 'Suyash', 'Male', '1999-12-23', 4354575746, 'O+', '112/78', 63, 'No', 'No', '2019-10-10', 'Airoli'),
+(0, '', 'Male', '0000-00-00', 0, '', '', 0, '', '', '2019-10-10', 'Airoli');
+
+--
+-- Triggers `donor`
+--
+DELIMITER $$
+CREATE TRIGGER `T1` AFTER INSERT ON `donor` FOR EACH ROW UPDATE blood_bank
+SET `A+`=`A+`+(CASE WHEN NEW.bgroup='A+' THEN 1 ELSE 0 END),
+    `A-`=`A-`+(CASE WHEN NEW.bgroup='A-' THEN 1 ELSE 0 END),
+    `B+`=`B+`+(CASE WHEN NEW.bgroup='B+' THEN 1 ELSE 0 END),
+    `B-`=`B-`+(CASE WHEN NEW.bgroup='B-' THEN 1 ELSE 0 END),
+    `O+`=`O+`+(CASE WHEN NEW.bgroup='O+' THEN 1 ELSE 0 END),
+    `O-`=`O-`+(CASE WHEN NEW.bgroup='O-' THEN 1 ELSE 0 END),   
+    `AB+`=`AB+`+(CASE WHEN NEW.bgroup='AB+' THEN 1 ELSE 0 END),
+    `AB-`=`AB-`+(CASE WHEN NEW.bgroup='AB-' THEN 1 ELSE 0 END)
+WHERE location='Mumbai'
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `request`
+--
+
+CREATE TABLE `request` (
+  `id` varchar(50) NOT NULL,
+  `pname` varchar(50) NOT NULL,
+  `dname` varchar(50) DEFAULT NULL,
+  `req_bgroup` varchar(10) NOT NULL,
+  `req_qty` varchar(10) NOT NULL,
+  `status` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `request`
+--
+
+INSERT INTO `request` (`id`, `pname`, `dname`, `req_bgroup`, `req_qty`, `status`) VALUES
+('67', 'Suyash Gupte', 'Prakash Yadav', 'O+', '4', 'Done'),
+('68', 'Pramod Sheoran', 'Riya Deshpande', 'A+', '6', 'Done'),
+('0', '3', '', 'O+', '', 'No'),
+('0', '5', '', 'B+', '', 'No'),
+('0', '5', '', 'B+', '', 'No'),
+('0', '5', '', 'B+', '', 'No'),
+('0', 'Abc dtf', '', 'B+', '9', 'No'),
+('0', 'Ram Singh', '', 'O+', '5', 'No'),
+('xyz@gmail.com', 'Ram Singh', '', 'O+', '5', 'No');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `accounts`
+--
+ALTER TABLE `accounts`
+  ADD PRIMARY KEY (`email`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

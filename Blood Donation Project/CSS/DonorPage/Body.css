@@ -1,0 +1,30 @@
+html { overflow-x : hidden;
+		font-family: Roboto, GillSans, Calibri, Trebuchet, sans-serif;
+	 }
+
+html, 
+body 
+{
+	background-color: #E9DABD;
+	position : relative;
+	height : 100%;
+	background-repeat : no-repeat;
+	background-size : cover;
+	margin : 0;
+	padding : 0;
+}
+
+a:link { text-decoration: none; }
+
+/* visited link */
+a:visited { text-decoration: none; }
+
+/* mouse over link */
+a:hover 
+{
+	text-decoration: none;
+	color: white;
+}
+
+/* selected link */
+a:active { text-decoration: none; }

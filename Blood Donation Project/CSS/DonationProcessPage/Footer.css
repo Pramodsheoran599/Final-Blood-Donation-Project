@@ -1,0 +1,52 @@
+#Footer
+	{
+		background-position : center;
+		background-repeat : no-repeat;
+		background-size : cover;
+		height : 310px;
+		width : 100%;
+		position : relative; 
+		overflow : hidden;
+	}
+	
+	.AboutUs
+	{
+		position : absolute;
+		color : white;
+		top : 40px;
+		left : 30px;
+	}
+	
+	.ProfileRow
+	{
+		display : flex;
+		position: relative;
+		margin : 25px;
+		padding: 10px;
+	}
+	
+	.ProfilePhoto{transition: transform .09s;}
+
+	.ProfilePhoto:hover 
+	{
+		transform: scale(1.14);
+	}
+	
+	.FooterQuote
+	{
+		position : relative;
+		bottom : 50px;
+	}
+	
+	.ProfileInfo
+	{
+		position : relative;
+		left : 35px;
+		top : 26px;
+		font-size : 20px;
+	}
+	
+	.fa fa-users 
+	{ 
+		font-size:50px; 
+	}

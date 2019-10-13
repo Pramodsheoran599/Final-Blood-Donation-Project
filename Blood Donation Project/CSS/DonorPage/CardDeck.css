@@ -1,0 +1,48 @@
+
+.row 
+{
+	display: flex;
+	position: relative;
+	left: 17px;
+	padding: 8px;
+}
+	
+.card
+{
+	left : 65px
+	box-shadow : 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition : 0.215s;
+	width : 22.5%;
+	background-color : rgb(39,42,56);
+	color : white;
+	font-family : Calibri;
+}
+
+.card:hover 
+{
+	box-shadow : 0 8px 16px 0 rgba(50,0,0,1);
+}
+
+.container
+{
+	padding: 2px 16px;
+}
+	
+#CardIcon
+{
+	background-color: rgb(39,42,56);
+	position: relative;
+	top: 20px;
+	bottom : 1px;
+	left: 134px;
+	font-size:50px;
+}
+	
+.CardLink
+{
+	color:inherit;
+	text-decoration: none;
+	border:0; 
+	text-decoration:none; 
+	outline:none;
+}

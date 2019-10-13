@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+	<head>	
+		<!--=========
+		     STYLING
+			=========-->
+			<style>
+				body
+				{
+					
+				}
+				.cards
+				{
+					display: flex;
+					position: relative;
+					left: 8px;
+					padding: 10px;
+					font-family: Roboto, GillSans, Calibri, Trebuchet, sans-serif;	
+				}
+				button
+				{
+					background-color: rgb(234,47,44);
+					border-width: 2.3px;
+					border-color: rgb(234,47,44);
+					border-radius: 8px;
+					font-size: 15px;
+					font-weight: 1000;
+					color: white;
+					padding: 15px;
+					font-family: Roboto, GillSans, Calibri, Trebuchet, sans-serif;	
+				}
+				button:hover 
+				{
+					background-color: rgb(255,255,255);
+					color : rgb(234,47,44);
+				}
+			</style>
+	</head>
+	
+	<body>
+
+		<!--========================
+			 ELIGIBILITY TEST MODAL
+			========================-->	
+			
+			<div class = "Body">
+				
+				<div class = "cards">
+					<div class = "Image">
+						<img id = "myImage" src = "Images/EligibilityTest/quiz-intro.png">
+					</div>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class = "Text">
+						<h1 id = "Question" style = "color: rgb(234,47,44);">ARE YOU THE TYPE TO GIVE BLOOD?</h1>
+						<h2 id = "Quote">Answer a few quick questions to find out if you’re eligible.</h2>
+						---------------------------------------------------------------------------------------------------------------------
+						<div class = "buttons">
+							<br>
+							<button id = "yesBtn" type="button" onclick="ToggleDataFailed()" style ="visibility : hidden;">YES</button>
+							<button id = "noBtn" type="button" onclick="ToggleDataSuccess()">TAKE THE QUIZ</button>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+	
+	</body>			
+	<!--===========
+		 SCRIPTING
+		===========-->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<script src = "Scripts/DonorPage/EligibilityQuiz.js"></script>
+			
+</html>
